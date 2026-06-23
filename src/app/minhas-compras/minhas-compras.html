@@ -1,0 +1,33 @@
+<main>
+    <div class="title d-flex flex-column align-items-center justify-content-center text-primary">
+        <h2>Compras Feitas</h2>
+    </div>
+
+    <div class="lista_compras m-5">
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-primary">
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Chave de Fenda</td>
+                    <td>R$ 35,00</td>
+                    <td>Ferramenta ideal para pequenos reparos e manutenção.</td>
+
+                    <!-- Botão disponível apenas até 3 dias após a compra -->
+                    <td>
+                        <p class="text-danger cursor-pointer m-0 cancelar" (click)="excluir()">
+                            Cancelar
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
