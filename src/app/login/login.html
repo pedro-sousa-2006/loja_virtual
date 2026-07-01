@@ -1,74 +1,110 @@
-<form action="" method="get" class="needs-validation" (submit)="validar()">
+<form class="needs-validation" (ngSubmit)="validar()">
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
 
-        <div class="card shadow p-4" style="width: 400px;">
+        <div class="card shadow-lg border-0 rounded-4 p-4" style="width: 420px;">
 
+            <!-- Cabeçalho -->
             <div class="text-center mb-4">
-                <h2 class="fw-bold text-primary">Login</h2>
-                <p class="text-muted">Entre para acessar sua conta</p>
+                <i class="bi bi-person-circle text-primary" style="font-size: 55px;"></i>
+                <h2 class="fw-bold mt-2">Login</h2>
+                <p class="text-muted mb-0">
+                    Faça login para acessar sua conta
+                </p>
             </div>
 
             <!-- Login -->
             <div class="mb-3">
-                <label for="login" class="form-label">Login</label>
+                <label for="login" class="form-label fw-semibold">
+                    Login
+                </label>
+
                 <input
                     type="text"
                     id="login"
                     name="login"
                     class="form-control"
                     placeholder="Digite seu login"
-                    [(ngModel)]="login"
-                    >
+                    autocomplete="username"
+                    required
+                    [(ngModel)]="login">
             </div>
 
             <!-- Senha -->
             <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
+                <label for="senha" class="form-label fw-semibold">
+                    Senha
+                </label>
+
                 <input
                     type="password"
                     id="senha"
                     name="senha"
                     class="form-control"
                     placeholder="Digite sua senha"
-                    [(ngModel)]="senha"
-                    >
+                    autocomplete="current-password"
+                    required
+                    [(ngModel)]="senha">
             </div>
 
             <!-- Botões -->
             <div class="d-grid gap-2 mt-3">
+
                 <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-box-arrow-in-right me-2"></i>
                     Entrar
                 </button>
 
-                <button type="reset" class="btn btn-outline-danger">
+                <button type="reset" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-clockwise me-2"></i>
                     Limpar
+                </button>
+
+            </div>
+
+            <!-- Divisor -->
+            <div class="text-center my-4">
+                <hr>
+                <span class="text-muted px-2 bg-white">
+                    ou
+                </span>
+            </div>
+
+            <!-- Google -->
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-dark">
+                    <i class="bi bi-google me-2"></i>
+                    Entrar com Google
                 </button>
             </div>
 
-            <!-- Links -->
+            <!-- Cadastro -->
             <div class="text-center mt-4">
-                <a href="#" class="text-decoration-none">
+                <span class="text-muted">
+                    Não possui uma conta?
+                </span>
+
+                <a routerLink="/cadastro"
+                   class="text-decoration-none fw-bold ms-1">
                     Cadastre-se
                 </a>
             </div>
 
-            <div class="text-center mt-2">
-                <a href="#" class="btn btn-outline-dark w-100">
-                    Entrar com Google
-                </a>
-            </div>
-
             <!-- Mensagem -->
-            <div class="text-center mt-3">
+            <div class="text-center mt-4">
+
                 @if(response.length > 0){
-                <b class="text-danger f-5" id="response">
-                    {{response}}
-                </b>
-                }@else {
-                <b class="text-sucess f-5" id="response">
-                    {{response}}
-                </b>
+
+                    <div class="alert alert-danger py-2 mb-0">
+                        {{response}}
+                    </div>
+
+                } @else {
+
+                    <div class="alert alert-success py-2 mb-0">
+                        {{response}}
+                    </div>
+
                 }
 
             </div>

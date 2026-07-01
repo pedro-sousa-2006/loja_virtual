@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4 text-center" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+            <h2 class="card-title mb-4">
+                Você deseja comprar o produto:
+            </h2>
+
+            <h4 class="text-primary fw-bold mb-4">
+                Produto do banco de dados
+            </h4>
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg" (click)="confirmarCompra()">
+                    Confirmar Compra
+                </button>
+
+                <button class="btn btn-outline-secondary" routerLink="/produtos">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

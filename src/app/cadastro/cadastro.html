@@ -1,0 +1,126 @@
+<form>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+        <div class="card shadow-lg border-0 rounded-4 p-4" style="max-width: 700px; width:100%;">
+
+            <!-- Cabeçalho -->
+            <div class="text-center mb-4">
+                <i class="bi bi-person-plus-fill text-primary" style="font-size:55px;"></i>
+                <h2 class="fw-bold mt-2">Cadastro</h2>
+                <p class="text-muted">
+                    Crie sua conta para acessar o sistema
+                </p>
+            </div>
+
+            <div class="row">
+
+                <!-- Nome -->
+                <div class="col-md-6 mb-3">
+                    <label for="nome" class="form-label fw-semibold">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        class="form-control"
+                        placeholder="Digite seu nome"
+                        required>
+                </div>
+
+                <!-- Sobrenome -->
+                <div class="col-md-6 mb-3">
+                    <label for="sobrenome" class="form-label fw-semibold">
+                        Sobrenome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="sobrenome"
+                        class="form-control"
+                        placeholder="Digite seu sobrenome"
+                        required>
+                </div>
+
+                <!-- Login -->
+                <div class="col-md-6 mb-3">
+                    <label for="login" class="form-label fw-semibold">
+                        Login
+                    </label>
+
+                    <input
+                        type="text"
+                        id="login"
+                        class="form-control"
+                        placeholder="Digite seu login"
+                        required>
+                </div>
+
+                <!-- Senha -->
+                <div class="col-md-6 mb-3">
+                    <label for="senha" class="form-label fw-semibold">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        class="form-control"
+                        placeholder="Digite sua senha"
+                        required>
+                </div>
+
+                <!-- Confirmar senha -->
+                <div class="col-12 mb-3">
+                    <label for="confirmarSenha" class="form-label fw-semibold">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        class="form-control"
+                        placeholder="Confirme sua senha"
+                        required>
+                </div>
+
+            </div>
+
+            <!-- Botões -->
+            <div class="d-grid gap-2 mt-3">
+
+                <button class="btn btn-primary">
+                    <i class="bi bi-person-check-fill me-2"></i>
+                    Cadastrar
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    routerLink="/login">
+
+                    <i class="bi bi-arrow-left me-2"></i>
+                    Voltar para o Login
+
+                </button>
+
+            </div>
+
+            <!-- Link -->
+            <div class="text-center mt-4">
+                <small class="text-muted">
+                    Já possui uma conta?
+                </small>
+
+                <a routerLink="/login"
+                   class="text-decoration-none fw-bold ms-1">
+                    Entrar
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
